@@ -17,14 +17,14 @@ TCP는 연결형 서비스로, 신뢰적인 전송을 보장하기에 handshake�
 ### 가상 회선 패킷 교환 방식
 
 * 각 패킷에는 가상회선 식별자가 포함되며 모든 패킷을 전송하면 가상회선이 해제되고 패킷들은 전송된  **순서대로 도착하는** 방식
-![Alt text](image-1.png)
+![Alt text](../image/image-1.png)
 
 ## 1. 3-Way HandShake (TCP 연결)
 
 TCP는 장치들 사이에 논리적인 접속을 성립하기 위해 3 Way HandShake를 사용한다.   
 이러한 절차는 TCP 접속을 성공적으로 성립하기 위해 반드시 필요하다.
 
-![Alt text](image.png)
+![Alt text](../image/image.png)
 
 1. `SYN 단계` : 클라이언트는 서버에 클라이언트의 `ISN`을 담아 `SYN`을 보낸다.
     - **ISN** : 새로운 TCP 연결의 첫 번째 패킷에 할당된 임의의 시퀀스 번호를 말한다. (위 그림에서는 100)
@@ -40,7 +40,7 @@ TCP는 장치들 사이에 논리적인 접속을 성립하기 위해 3 Way Hand
 >
 
 ## 4-Way HandShake (TCP 연결 해제)
-![Alt text](image-3.png)
+![Alt text](../image/image-3.png)
 
 1. 먼저 클라이언트가 연결을 닫으려고 할 때 `FIN`으로 설정된 세그먼트를 보낸다. 그리고 클라이언트는 `FIN_WAIT_1` 상태로 들어가고 서버의 응답을 기다린다.
 2.  서버는 클라이언트로 `ACK`라는 승인 세그먼트를 보낸다. 그리고 `CLOSE_WAIT` 상태에 들어간다. 클라이언트는 세그먼트를 받으면 `FIN_WAIT_2` 상태에 들어간다.

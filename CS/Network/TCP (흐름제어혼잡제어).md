@@ -117,9 +117,3 @@
     - 혼잡한 상태가 되면 window size를 1로 줄이지 않고 반으로 줄이고 선형증가시키는 방법이다. 이 정책까지 적용하면 혼잡 상황을 한번 겪고 나서부터는 순수한 AIMD 방식으로 동작하게 된다.
 
 <br>
-
-[ref]<br>
-
-- <https://www.brianstorti.com/tcp-flow-control/>
-- <https://www.brianstorti.com/tcp-flow-control/>
-
