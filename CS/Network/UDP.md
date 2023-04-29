@@ -70,7 +70,7 @@ UDP segment header에 보면 checksum 이라는 항목이 존재 -> segment의 �
         ```
     
     > 이렇게 계산한 checksum 값을 송신측에서 checksum영역에 넣어서 수신측에 보내면 수신측도 마찬가지로 sum을 구하고 송신측에서 보낸 checksum과 동일한지 확인한다.   
-    만약 동일하다면 에러가 없는 것이고 동일하지 않다면 에러가 있다는 것을 확인할 수 있다.  
+    만약 동일하다면 에러가 없는 것이고 동일하지 않다면 에러가 있다는 것을 확인할 수 있다!  
 
     <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FNpwkc%2FbtrbgjovycK%2FIe9wi2QaFnrQ9xWbtFpVX0%2Fimg.png"/>
 
