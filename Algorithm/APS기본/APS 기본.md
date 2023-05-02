@@ -249,22 +249,3 @@ public class R1_FactorialTest {
     | 소스 코드 형태 | 선택 구조 | 반복 구조 |
     | 무한 반복시 | 스택 오버플로우 | CPU를 반복해서 점유 |
 
-## 하노이 탑 문제
-
-- 하노이 탑 게임은 세 개의 기둥과 서로 다른 크기의 N개의 원판으로 구성된다.
-- 원판을 세 번째로 모두 옮겨 놓아야 한다.
-- 원판을 옮길 때는 반드시 한 번에 한 개씩 옮길 수 있고 두 번째 기둥을 이용할 수 있다.
-- 옮기는 과정에서 절대로 큰 원판이 작은 원판 위에 놓이지 않아야 한다.
-    
-    <img src="https://file.notion.so/f/s/a743a1a5-0d31-4693-b257-5a63daf2f221/Untitled.png?id=09b19435-50a6-4d2e-ac76-ba80fb19a62f&table=block&spaceId=e115423d-0a97-4b37-9fff-0ad5ef1d11e7&expirationTimestamp=1693836000000&signature=XCDwyLh3DI25KCn05LvtK8mh38pjva4iCwybIMxhZ7s&downloadName=Untitled.png"/>
-    
-
-- 제약사항
-    - 원판 번호는 맨 위부터 1,2,3 순으로 부여
-    - 기둥은 3개로 가정한다.
-    - 시작은 N개의 원판이 1번 기둥에 쌓여져 있다.
-- 입력
-    - 원판 개수인 N을 입력 받는다.
-    - 원판 번호는 맨 위부터 1,2,3 순으로 부여
-- 출력
-    - 옮겨지는 원판 번호 : 출발기둥번호 → 목적기둥번호
