@@ -49,3 +49,71 @@
     
     <img src="https://file.notion.so/f/s/f4801e77-7af8-4381-979d-f81cb6a3ddda/Untitled.png?id=574a6043-bd00-441a-a4a9-1423c0d5bda4&table=block&spaceId=e115423d-0a97-4b37-9fff-0ad5ef1d11e7&expirationTimestamp=1693836000000&signature=OwS1KIypssUUWJun63GAdH9NUKeTrSDAg010JwbEhuM&downloadName=Untitled.png"/>
     
+
+## 순열 구현 - 재귀
+
+- 예) `{1, 2 ,3}`을 포함하는 모든 순열을 생성하는 함수
+- 재귀 호출을 통한 순열 생성
+
+```java
+// 수도 코드
+numbers[] : 순열 저장 배열
+isSelected[] : 인덱스에 해당하는 숫자가 사용 중인지 저장하는 배열
+pern(cnt) // cnt : 현재까지 뽑은 순열 수의 개수
+	if cnt == 3
+		순열 생성 완료
+	else
+		for i from 1 to 3
+			if isSelected[i] == true then continue
+			numbers[cnt] <- i
+			isSelected[i] <- true
+			perm(cnt + 1)
+			isSelected[i] <- false
+		end for
+```
+
+```java
+public class P2_PermutationInputTest {
+	//3P3 순열
+	// {1, 2, 3} -> 경우의 수
+	private static int N;
+	private static int R;
+	private static boolean[] isSelected;
+	private static int[] numbers;
+	private static int[] input;
+	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		N = sc.nextInt();
+		R = sc.nextInt();
+		input = new int[N];
+		for(int i = 0; i < N; i++) {
+			input[i] = sc.nextInt();
+		}
+		
+		numbers = new int[R];
+		isSelected = new boolean[N + 1]; // 숫자 1 ~ N까지의 수의 선택여부 저장
+		permutation(0);
+	}
+
+	private static void permutation(int cnt) { // 뽑은 개수
+		if(cnt == 3) {
+			System.out.println(Arrays.toString(numbers));
+			return;
+		}
+		else {
+			// 유도 부분
+			for(int i = 0; i < N; i++) {
+				// 선택 여부 체크
+				if(isSelected[i]) continue;
+				
+				numbers[cnt] = input[i]; // 숫자 뽑기
+				isSelected[i] = true; // 뽑은 숫자 체크
+				permutation(cnt + 1); // 다음 숫자 뽑으러 가기
+				isSelected[i] = false; // 리턴하고 돌아 왔을 때 뽑지 않은 상태로 되돌림.
+			}
+		}
+	}
+}
+```
