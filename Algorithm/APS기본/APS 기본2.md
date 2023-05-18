@@ -28,26 +28,7 @@
 - 많은 종류의 문제들이 특정 조건을 만족하는 경우나 요소를 찾는 것이다.
 - 또한 이들은 전형적으로 `순열(Permutation)`, `조합(Combination)`, 그리고 `부분집합(subset)`과 같은 **조합적 문제들(Combinatorial Problems)** 과 연관된다.
 
-### 순열(Permutation)
 
-- 서로 다른 것들 중 몇 개를 뽑아서 한 줄로 나열하는 것
-- 서로 다른 n개 중에서 r개를 택하는 순열은 아래와 같이 표현한다.
-    
-    **nPr**
-    
-- 그리고 nPr은 다음과 같은 식이 성립한다.
-    
-    **nPr = n * (n - 1) * (n - 2)* ….. * (n-r+1)**
-    
-- nPn = n! 이라고 표기하며 Factorial이라 부른다.
-    
-    **nPn = n * (n - 1) * (n - 2)* ….. * 1**
-    
-- N 개의 요소들에 대해서 n! 개의 순열들이 존재한다.
-    - 12! = 479,001,600
-    - **n > 12 인 경우, 시간 복잡도 폭발적으로 증가한다!**
-    
-    <img src="https://file.notion.so/f/s/f4801e77-7af8-4381-979d-f81cb6a3ddda/Untitled.png?id=574a6043-bd00-441a-a4a9-1423c0d5bda4&table=block&spaceId=e115423d-0a97-4b37-9fff-0ad5ef1d11e7&expirationTimestamp=1693836000000&signature=OwS1KIypssUUWJun63GAdH9NUKeTrSDAg010JwbEhuM&downloadName=Untitled.png"/>
     
 
 ## 순열 구현 - 재귀
