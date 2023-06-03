@@ -1,10 +1,14 @@
-## HTTP & HTTPS
+## HTTP(HyperText Transfer Protocol)
 
-<br>
+  - 인터넷 상에서 클라이언트와 서버가 데이터를 주고 받을 때 쓰는 통신 규약 (프로토콜)
 
-- ##### HTTP(HyperText Transfer Protocol)
+  - 80번 포트를 사용한다. -> 80번 포트에서 요청을 기다림 -> 클라이언트는 80포트로 요청을 보낸다.
+  
 
-  인터넷 상에서 클라이언트와 서버가 자원을 주고 받을 때 쓰는 통신 규약
+<img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbkdJ4Q%2FbtqK6AXLEtC%2FjBZzMuJBWzdLYmqILo5Ri1%2Fimg.png" />
+
+ - HTTP는 애플리케이션 레벨의 프로토콜로 TCP/IP 위에서 작동한다.
+ - HTTP는 상태를 가지고 있지 않는 Stateless 프로토콜이며 Method, Path, Version, Headers, Body로 구성
 
 <br>
 
@@ -34,17 +38,44 @@ HTTP는 텍스트 교환이므로, 누군가 네트워크에서 신호를 가로
 
 <br>
 
-- ##### HTTPS(HyperText Transfer Protocol Secure)
+## HTTPS(HyperText Transfer Protocol Secure)
 
   인터넷 상에서 정보를 암호화하는 SSL 프로토콜을 사용해 클라이언트와 서버가 자원을 주고 받을 때 쓰는 통신 규약
 
-HTTPS는 텍스트를 암호화한다. (공개키 암호화 방식으로!) : [공개키 설명](https://github.com/kim6394/tech-interview-for-developer/blob/master/Computer%20Science/Network/%EB%8C%80%EC%B9%AD%ED%82%A4%20%26%20%EA%B3%B5%EA%B0%9C%ED%82%A4.md)
+HTTPS는 텍스트를 암호화한다. (공개키 암호화 방식으로!) 
+
+* HTTPS는 443포트를 사용한다.
+
+* 네트워크 상에서 중간에 제3자가 정보를 볼 수 없도록 암호화를 지원한다.
+
+* 대칭키 암호화
+    - 클라이언트와 서버가 동일한 키를 사용해 암호화/복호화를 진행한다.
+    - 키가 노출되면 매우 위험하지만 연산 속도가 빠름
+
+* 비대칭키 암호화
+    - 1개의 쌍으로 구성된 공개키와 개인키를 암호화/복호화 하는데 사용한다.
+    - 키가 노출되어도 비교적 안전하지만 연산 속도가 느리다.
+
+## 비대칭키 암호화
+
+비대칭 키 암호화는 공개키/개인키 암호화 방식을 이용해 데이터를 암호화하고 있다.
+* 공개키 : 모두에게 공개가능한 키
+* 개인키 : 나만 가지고 알고 있어야 하는 키
+
+암호화를 공개키로 하느냐 개인키로 하느냐에 따라 얻는 효과가 다른데, 공개키와 개인키로 암호화하면 각각 다음과 같은 효과를 얻을 수 있다.
+
+* 공개키 암호화 : 공개키로 암호화하면 개인키로만 복호화 할 수 있다 -> 개인키는 나만 가지고 있으므로, 나만 볼 수 있다.
+
+* 개인키 암호화 : 개인키로 암호화하면 공개키로만 복호화할 수 있다 -> 공개키는 모두에게 공개되어 있으므로 내가 인증한 정보임을 알려 신뢰성을 보장할 수 있다.
+
+<img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FOKcog%2FbtqK71fM8a4%2Fg1HmcDOR7MVRRz7pSKKJWk%2Fimg.png"/>
 
 <br>
 
 <br>
 
-#### HTTPS 통신 흐름
+
+## HTTPS 통신 흐름
 
 1. 애플리케이션 서버(A)를 만드는 기업은 HTTPS를 적용하기 위해 공개키와 개인키를 만든다.
 
@@ -79,7 +110,3 @@ HTTPS도 무조건 안전한 것은 아니다. (신뢰받는 CA 기업이 아닌
 이때는 HTTPS지만 브라우저에서 `주의 요함`, `안전하지 않은 사이트`와 같은 알림으로 주의 받게 된다.
 
 <br>
-
-##### [참고사항]
-
-[링크](https://jeong-pro.tistory.com/89)
